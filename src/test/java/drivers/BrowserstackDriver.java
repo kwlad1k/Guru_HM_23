@@ -11,16 +11,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserstackDriver implements WebDriverProvider {
-
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
-
         MutableCapabilities caps = new MutableCapabilities();
 
         // Set your access credentials
         caps.setCapability("browserstack.user", "kwladck_37YnDW");
-        caps.setCapability("browserstack.key", "5yrxu4nFTKkRExUAhqxh ");
+        caps.setCapability("browserstack.key", "kf8vRL9gFB5DEHv3Eh4L");
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
