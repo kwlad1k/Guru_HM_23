@@ -11,7 +11,9 @@ import org.aeonbits.owner.Config;
 public interface CapabilityConfig extends Config {
 
     String project();
+
     String build();
+
     String name();
 
 }

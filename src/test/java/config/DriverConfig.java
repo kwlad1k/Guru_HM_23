@@ -17,5 +17,8 @@ public interface DriverConfig extends Config {
     @Key("device.version")
     @DefaultValue("9.0")
     String osVersion();
+
+    @Key("remote.url")
+    String remoteUrl();
 }
 
