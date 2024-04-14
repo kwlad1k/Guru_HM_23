@@ -20,5 +20,8 @@ public interface DriverConfig extends Config {
 
     @Key("remote.url")
     String remoteUrl();
+
+    @Key("search.value")
+    String searchValue();
 }
 
