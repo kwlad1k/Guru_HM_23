@@ -17,6 +17,7 @@ public class SearchTest extends TestBase {
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
         });
         step("Verify content found", () ->
-            $$(className("android.widget.TextView")).shouldHave(sizeGreaterThan(0)));
+            $$(id("org.wikipedia.alpha:id/page_list_item_title"))
+                    .shouldHave(sizeGreaterThan(0)));
     }
 }
