@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.2'
-    id "io.freefair.lombok" version "6.0.0-m2"
 }
 
 group = 'kwlad1ck'
@@ -11,8 +10,13 @@ repositories {
     mavenCentral()
 }
 
-def restAssuredVersion = "5.4.0",
-    allureVersion = "2.25.0"
+def selenideVersion = "6.13.0", //6.19.1
+    allureVersion = "2.25.0", //2.25.0
+    restAssuredVersion = "5.4.0", //5.4.0
+    junitVersion = "5.10.2", //5.10.2
+    slf4jVersion = "2.0.12", //2.0.12
+    ownerVersion = "1.0.12",
+    assertjVersion = "3.25.3"
 
 allure {
     report {
@@ -30,15 +34,15 @@ allure {
 
 dependencies {
     testImplementation(
-            "io.rest-assured:rest-assured:$restAssuredVersion",
-            "io.rest-assured:json-schema-validator:$restAssuredVersion",
-            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "org.junit.jupiter:junit-jupiter:5.10.2",
-            'com.codeborne:selenide:6.19.1',
-            "org.assertj:assertj-core:3.25.3",
-            "org.slf4j:slf4j-simple:2.0.12",
-            'org.aeonbits.owner:owner:1.0.12'
+            "io.appium:java-client:8.3.0",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "org.assertj:assertj-core:$assertjVersion",
+            "org.aeonbits.owner:owner:$ownerVersion"
 
     )
 }
