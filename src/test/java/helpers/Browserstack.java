@@ -1,12 +1,8 @@
 package helpers;
 
-
 import static io.restassured.RestAssured.given;
 
 public class Browserstack {
-
-    //curl -u ":" -X GET "https://api.browserstack.com/app-automate/sessions/<session-id>.json"
-
     public static String videoUrl(String sessionId) {
         String url = String.format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
