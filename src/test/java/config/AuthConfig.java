@@ -10,9 +10,9 @@ import org.aeonbits.owner.Config;
 
 public interface AuthConfig extends Config {
 
-    @Key("auth.user")
-    String authUser();
+    @Key("browserstack.user.name")
+    String userName();
 
-    @Key("auth.key")
-    String authKey();
+    @Key("browserstack.key")
+    String userKey();
 }
