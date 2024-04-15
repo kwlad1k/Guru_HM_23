@@ -18,21 +18,19 @@ public class BrowserStackTests extends TestBase {
 
     @Test
     void successfulSearchTest() {
-        search.clickSearchInput()
+        search.clickSkipBtn()
+                .clickSearchInput()
                 .setSearchValue(driverConfig.searchValue())
                 .checkSearchContent();
     }
 
     @Test
     void openArticleTest() {
-        step("Type search", () -> {
-            $(accessibilityId("Search Wikipedia")).click();
-            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys(driverConfig.searchValue());
-        });
-        step("Verify content found", () ->
-                $$(id("org.wikipedia.alpha:id/page_list_item_title"))
-                        .shouldHave(sizeGreaterThan(0)));
-        step("Verify content found", () ->
-                $$(id("org.wikipedia.alpha:id/page_list_item_title")).first().click());
+        search.clickSkipBtn()
+                .clickSearchInput()
+                .setSearchValue(driverConfig.searchValue())
+                .checkSearchContent()
+                .clickFirstSearchItem()
+                .checkTitle(driverConfig.searchValue());
     }
 }
