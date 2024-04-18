@@ -15,13 +15,14 @@ public class Search {
 
     private SelenideElement searchInput = $(accessibilityId("Search Wikipedia")),
 
-    searchSrc = $(id("org.wikipedia.alpha:id/search_src_text")),
+    searchSrc = $(id("org.wikipedia:id/search_src_text")),
+
 
     skipBtn = $(id("org.wikipedia:id/fragment_onboarding_skip_button")),
 
     textTitle = $(className("android.widget.TextView"));
 
-    private ElementsCollection itemTitleList = $$(id("org.wikipedia.alpha:id/page_list_item_title"));
+    private ElementsCollection itemTitleList = $$(id("org.wikipedia:id/page_list_item_title"));
 
     @Step("Нажатине на кнопку Skip в привествующем меню")
     public Search clickSkipBtn() {
