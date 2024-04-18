@@ -1,6 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -30,6 +29,7 @@ public class Search {
         skipBtn.click();
         return this;
     }
+
     @Step("Нажатие на поле поиска")
     public Search clickSearchInput() {
 
